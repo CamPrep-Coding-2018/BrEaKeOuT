@@ -60,8 +60,8 @@ void draw() {
     spd.x *= -1;
   }
   if (posball.y >= height) {
-    String s = "GaMe OvEr!!";
-    fill(255, 60, 255);
+    String s = "GAME OVER!!";
+    fill(2505, 0, 2);
     textAlign(CENTER, CENTER);
     textSize(80);
     text(s, width/2, height/2);
@@ -75,7 +75,7 @@ void draw() {
     }
   }
   if(bricks_alive <= 0) {
-  String s = "YoU WiN!!";
+  String s = "YOU WIN!!";
     fill(0, 255, 0);
     textAlign(CENTER, CENTER);
     textSize(80);
@@ -92,11 +92,11 @@ void draw() {
     fill(255, 255, 255);   
   }
 
-  fill(255, 255, 255);
+  fill(0, 0, 255);
   textAlign(CENTER, CENTER);
   textSize(30);
-  text(score, 10, 10);
-  fill(255, 255, 255);
+  text(score, 1050, 660);
+  fill(0, 0, 255);
 
   if (d_key) {
     posbox.x +=10;
@@ -132,7 +132,7 @@ void mousePressed() {
   {
     spd.x = (mouseX - posball.x)/dif;
     spd.y = (mouseY- posball.y)/dif;
-    can_click = false;
+    can_click = true;
   }
 }
 
